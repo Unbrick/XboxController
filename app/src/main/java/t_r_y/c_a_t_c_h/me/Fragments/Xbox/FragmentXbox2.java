@@ -1,7 +1,6 @@
 package t_r_y.c_a_t_c_h.me.Fragments.Xbox;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.widget.EditText;
@@ -9,7 +8,7 @@ import android.widget.LinearLayout;
 
 import com.github.machinarius.preferencefragment.PreferenceFragment;
 
-import t_r_y.c_a_t_c_h.me.Helper;
+import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**
@@ -22,7 +21,6 @@ public class FragmentXbox2 extends PreferenceFragment implements Preference.OnPr
         addPreferencesFromResource(R.xml.prefs_xbox_actions);
         findPreference("xnotify").setOnPreferenceClickListener(this);
         findPreference("changegt").setOnPreferenceClickListener(this);
-        findPreference("triggerTray").setOnPreferenceClickListener(this);
         findPreference("reboot").setOnPreferenceClickListener(this);
     }
 
@@ -34,9 +32,6 @@ public class FragmentXbox2 extends PreferenceFragment implements Preference.OnPr
                 break;
             case "changegt":
                 altertDialogChangeGT();
-                break;
-            case "triggerTray":
-                Helper.cycleTray();
                 break;
             case "reboot":
                 alertDialogReboot();

@@ -12,7 +12,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetConsole;
-import t_r_y.c_a_t_c_h.me.Helper;
+import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**

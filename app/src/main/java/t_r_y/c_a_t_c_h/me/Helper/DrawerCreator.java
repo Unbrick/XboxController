@@ -1,4 +1,4 @@
-package t_r_y.c_a_t_c_h.me;
+package t_r_y.c_a_t_c_h.me.Helper;
 
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,11 +12,13 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import t_r_y.c_a_t_c_h.me.Activities.MainActivity;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetConsole;
 import t_r_y.c_a_t_c_h.me.Fragments.BlackOps2.BlackOps2BaseFragment;
 import t_r_y.c_a_t_c_h.me.Fragments.BlackOps3.BlackOps3BaseFragment;
 import t_r_y.c_a_t_c_h.me.Fragments.Settings.SettingsFragment;
 import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXboxParent;
+import t_r_y.c_a_t_c_h.me.R;
 
 /**
  * Created by Admin on 13.09.2016.

@@ -1,6 +1,5 @@
 package t_r_y.c_a_t_c_h.me;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskBo3Ufo;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskPlainCommandJRPC2;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskSendMessageKillfeed;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskSetMem;
@@ -167,10 +166,6 @@ public class BlackOps3XboxMods {
             String offset = Integer.toHexString(0x8451660c + (player - 1) * 0x61B8);
             new AsyncTaskSetMem().execute(offset, "00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF");
             messageKillfeed(ZM, "^2Ammo given to Player " + player);
-        }
-
-        public static void ufoMode(boolean enabled) {
-            new AsyncTaskBo3Ufo(enabled).execute();
         }
 
     }

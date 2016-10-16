@@ -8,11 +8,6 @@
             android:persistent="false"
             android:title="God Mode" />
 
-        <SwitchPreference
-            android:key="ufo"
-            android:persistent="false"
-            android:title="Ufo Mode (Only Player 1)" />
-
 
         <Preference
             android:key="ammo"

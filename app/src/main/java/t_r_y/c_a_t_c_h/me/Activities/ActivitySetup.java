@@ -8,7 +8,7 @@ import com.androidadvance.topsnackbar.TSnackbar;
 import com.badoualy.stepperindicator.StepperIndicator;
 
 import t_r_y.c_a_t_c_h.me.Adapter.SetupAdapter;
-import t_r_y.c_a_t_c_h.me.NonSwipeableViewPager;
+import t_r_y.c_a_t_c_h.me.Helper.NonSwipeableViewPager;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**

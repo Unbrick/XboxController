@@ -4,6 +4,11 @@
     <PreferenceCategory
         android:title="Xbox General">
 
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
         <Preference
             android:persistent="false"
             android:title="xNotify"
@@ -13,11 +18,6 @@
             android:persistent="false"
             android:title="Change Gamertag"
             android:key="changegt"/>
-
-        <Preference
-            android:persistent="false"
-            android:title="Open/Close Tray"
-            android:key="triggerTray"/>
 
         <Preference
             android:persistent="false"

@@ -7,11 +7,11 @@ import com.github.machinarius.preferencefragment.PreferenceFragment;
 
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskSetMem;
 import t_r_y.c_a_t_c_h.me.BlackOps2XboxMods;
-import t_r_y.c_a_t_c_h.me.Constants;
-import t_r_y.c_a_t_c_h.me.Helper;
+import t_r_y.c_a_t_c_h.me.Helper.Constants;
+import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.R;
 
-import static t_r_y.c_a_t_c_h.me.Constants.NOP;
+import static t_r_y.c_a_t_c_h.me.Helper.Constants.NOP;
 
 /**
  * Created by Admin on 07.09.2016.

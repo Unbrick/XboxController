@@ -14,7 +14,7 @@ import com.gigamole.navigationtabstrip.NavigationTabStrip;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import t_r_y.c_a_t_c_h.me.Adapter.XboxAdapter;
-import t_r_y.c_a_t_c_h.me.MainActivity;
+import t_r_y.c_a_t_c_h.me.Activities.MainActivity;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**

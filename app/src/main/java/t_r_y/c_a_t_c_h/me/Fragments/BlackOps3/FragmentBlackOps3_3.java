@@ -12,14 +12,11 @@ import android.widget.RadioGroup;
 
 import com.github.machinarius.preferencefragment.PreferenceFragment;
 
-import java.util.ArrayList;
-
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetGamertags;
 import t_r_y.c_a_t_c_h.me.BlackOps3XboxMods;
-import t_r_y.c_a_t_c_h.me.Constants;
+import t_r_y.c_a_t_c_h.me.Helper.Constants;
 import t_r_y.c_a_t_c_h.me.Fragments.BaseFragmentWeaponSelector;
-import t_r_y.c_a_t_c_h.me.Helper;
-import t_r_y.c_a_t_c_h.me.Interfaces.OnGamertagsFetchedListener;
+import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**
@@ -43,11 +40,11 @@ public class FragmentBlackOps3_3 extends PreferenceFragment implements Preferenc
         this.radioGroup = (RadioGroup) view.findViewById(R.id.radioGroup);
         this.refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.refreshLayout);
         radioGroup.check(R.id.rbPlayer1);
-        refreshLayout.setOnRefreshListener(() -> update());
+        refreshLayout.setOnRefreshListener(this::update);
         if (!refreshLayout.isRefreshing()){
             refreshLayout.post(() -> refreshLayout.setRefreshing(true));
         }
-        new Handler().postDelayed(() -> update(),1000);
+        new Handler().postDelayed(this::update,1000);
         return view;
     }
 
@@ -96,7 +93,6 @@ public class FragmentBlackOps3_3 extends PreferenceFragment implements Preferenc
         addPreferencesFromResource(R.xml.pref_bo3_zm);
 
         findPreference("god").setOnPreferenceChangeListener(this);
-        findPreference("ufo").setOnPreferenceChangeListener(this);
 
         findPreference("money").setOnPreferenceClickListener(this);
         findPreference("ammo").setOnPreferenceClickListener(this);
@@ -139,9 +135,6 @@ public class FragmentBlackOps3_3 extends PreferenceFragment implements Preferenc
             switch (preference.getKey()) {
                 case "god":
                     BlackOps3XboxMods.Zombies.godMode(player, b);
-                    break;
-                case "ufo":
-                    BlackOps3XboxMods.Zombies.ufoMode(b);
                     break;
             }
         }

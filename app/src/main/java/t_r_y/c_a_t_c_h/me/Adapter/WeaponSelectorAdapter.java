@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import t_r_y.c_a_t_c_h.me.Constants;
+import t_r_y.c_a_t_c_h.me.Helper.Constants;
 import t_r_y.c_a_t_c_h.me.Fragments.FragmentGiveWeapon;
 
 /**

@@ -14,7 +14,7 @@
         app:stpi_circleColor="#009688"
         app:stpi_stepCount="3"/>
 
-    <t_r_y.c_a_t_c_h.me.NonSwipeableViewPager
+    <t_r_y.c_a_t_c_h.me.Helper.NonSwipeableViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_below="@+id/stepperIndicator"
         android:id="@+id/pagerSetup"

@@ -1,4 +1,4 @@
-package t_r_y.c_a_t_c_h.me;
+package t_r_y.c_a_t_c_h.me.Helper;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -9,11 +9,11 @@ import com.androidadvance.topsnackbar.TSnackbar;
 
 import java.math.BigInteger;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskCycleTray;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskPlainCommand;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskPlainCommandWithResult;
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskSetMem;
 import t_r_y.c_a_t_c_h.me.Interfaces.ResultListener;
+import t_r_y.c_a_t_c_h.me.R;
 
 /**
  * Created by Admin on 07.09.2016.
@@ -39,10 +39,6 @@ public class Helper {
 
     public static void reboot(){
         new AsyncTaskPlainCommand().execute("magicboot cold");
-    }
-
-    public static void cycleTray(){
-        new AsyncTaskCycleTray().execute();
     }
 
     public static void setGT(String gamertag){

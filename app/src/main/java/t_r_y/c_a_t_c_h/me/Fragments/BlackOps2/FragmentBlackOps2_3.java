@@ -12,14 +12,11 @@ import android.widget.RadioGroup;
 
 import com.github.machinarius.preferencefragment.PreferenceFragment;
 
-import java.util.ArrayList;
-
 import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetGamertags;
 import t_r_y.c_a_t_c_h.me.BlackOps2XboxMods;
-import t_r_y.c_a_t_c_h.me.Constants;
+import t_r_y.c_a_t_c_h.me.Helper.Constants;
 import t_r_y.c_a_t_c_h.me.Fragments.BaseFragmentWeaponSelector;
-import t_r_y.c_a_t_c_h.me.Helper;
-import t_r_y.c_a_t_c_h.me.Interfaces.OnGamertagsFetchedListener;
+import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**

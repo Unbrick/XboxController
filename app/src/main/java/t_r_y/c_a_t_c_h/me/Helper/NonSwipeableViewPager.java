@@ -1,4 +1,4 @@
-package t_r_y.c_a_t_c_h.me;
+package t_r_y.c_a_t_c_h.me.Helper;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

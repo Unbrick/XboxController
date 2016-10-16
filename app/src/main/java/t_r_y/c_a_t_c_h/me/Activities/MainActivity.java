@@ -1,4 +1,4 @@
-package t_r_y.c_a_t_c_h.me;
+package t_r_y.c_a_t_c_h.me.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,10 @@ import com.tramsun.libs.prefcompat.Pref;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import t_r_y.c_a_t_c_h.me.Activities.ActivitySetup;
+import t_r_y.c_a_t_c_h.me.Helper.ConnectionChecker;
+import t_r_y.c_a_t_c_h.me.Helper.DrawerCreator;
 import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXboxParent;
+import t_r_y.c_a_t_c_h.me.R;
 
 public class MainActivity extends AppCompatActivity {
 
