@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_marginBottom="8dp"
+        android:text="Your chosen IP"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/md_black_1000"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tvChosenIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="validate"
+        android:layout_gravity="center_horizontal"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btnValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="BlackOps 2 Host Zombie Mods">
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="God mode"
+            android:key="god"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Unlimited ammo"
+            android:key="ammo"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Set money to 100k"
+            android:key="money"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Weapons">
+
+        <Preference
+            android:persistent="false"
+            android:title="Give weapons"
+            android:key="weapons"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

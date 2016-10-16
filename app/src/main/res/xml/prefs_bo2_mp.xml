@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="BlackOps 2 Host Mods">
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Force host"
+            android:key="forcehost"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="God Mode"
+            android:key="godmode"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Unlimited ammo"
+            android:key="ammo"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Blur"
+            android:key="blur"/>
+
+
+        <Preference
+            android:persistent="false"
+            android:title="Give Killstreaks"
+            android:key="killstreaks"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Hardcore HUD"
+            android:key="hud"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Freeze player"
+            android:key="freeze"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Low gravity"
+            android:key="gravity"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Superjump"
+            android:key="superjump"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Change Team">
+
+        <Preference
+            android:persistent="false"
+            android:title="Team 1"
+            android:key="team1"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Team 2"
+            android:key="team2"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

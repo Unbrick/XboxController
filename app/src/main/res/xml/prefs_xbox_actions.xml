@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Xbox General">
+
+        <Preference
+            android:persistent="false"
+            android:title="xNotify"
+            android:key="xnotify"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Change Gamertag"
+            android:key="changegt"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Open/Close Tray"
+            android:key="triggerTray"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Reboot console"
+            android:key="reboot"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="BlackOps 3 OffHost Mods">
+
+        <Preference
+            android:persistent="false"
+            android:title="Disable DVAR AC"
+            android:key="disabledvar"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Remove cold blooded"
+            android:key="coldblooded"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Red Boxes"
+            android:key="redbox"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Advanced UAV"
+            android:key="uav"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Charms"
+            android:key="charms"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="No Recoil"
+            android:key="recoil"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Small crosshair"
+            android:key="crosshair"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="No gun sway"
+            android:key="gunsway"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

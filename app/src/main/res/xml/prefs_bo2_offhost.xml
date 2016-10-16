@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="BlackOps 2 OffHost Mods">
+
+        <Preference
+            android:persistent="false"
+            android:title="Bypass"
+            android:key="bo2bypass"
+            android:summary="ONCE CLICK THIS BEFORE MODDING"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Radar"
+            android:key="radar"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Charms"
+            android:key="charms"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="RedBoxes"
+            android:key="redBoxes"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Laser"
+            android:key="laser"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="No recoil"
+            android:key="recoil"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

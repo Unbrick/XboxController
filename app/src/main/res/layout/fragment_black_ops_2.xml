@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnBypass"
+        android:text="Bypass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No recoil"
+        android:id="@+id/swRecoil"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laser"
+        android:id="@+id/swLaser" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red boxes"
+        android:id="@+id/swRedBoxes" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charms"
+        android:id="@+id/swCharms"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radar"
+        android:id="@+id/swRadar"
+        android:checked="false" />
+
+</LinearLayout>

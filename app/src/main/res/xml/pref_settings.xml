@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Settings">
+
+        <Preference
+            android:persistent="false"
+            android:key="pref_settings_resetup"
+            android:title="Re-Setup your Xbox"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

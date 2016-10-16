@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Black Ops 3 Host mods">
+
+        <Preference
+            android:persistent="false"
+            android:title="Force host"
+            android:key="forcehost"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="God mode"
+            android:key="god"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Increase Speed (til death)"
+            android:key="speed"/>
+
+        <Preference
+            android:persistent="false"
+            android:title="Unlimited Ammo + Give killstreaks"
+            android:key="ammo"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Increse jump height"
+            android:key="jump"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Weapons">
+
+        <Preference
+            android:persistent="false"
+            android:title="Give weapons"
+            android:key="weapons"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

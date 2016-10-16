@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_gravity="center_horizontal"
+        android:text="Setup your XBOX"
+        android:textSize="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginBottom="8dp"
+        android:text="To setup your XBOX you have to enter your XBOX IP-Address. \n\nImportant: Your XBOX needs a JTAG/RGH installed and XBDM and JRPC2 installed for this App to work."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<Button-->
+        <!--style="@style/Widget.AppCompat.Button.Colored"-->
+        <!--android:id="@+id/btnScan"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text="Scan for devices"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <TextView
+        android:layout_marginBottom="8dp"
+        android:text="Enter your IP here:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="192"
+            android:maxLength="3"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789"
+            android:layout_weight="1"
+            android:id="@+id/etIP1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="168"
+            android:maxLength="3"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/etIP2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="1"
+            android:maxLength="3"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:id="@+id/etIP3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="1"
+            android:maxLength="3"
+            android:inputType="number|numberDecimal"
+            android:digits="0123456789"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:id="@+id/etIP4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btnProceed"
+        android:text="Procceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="BlackOps 3 Host Zombie Mods">
+
+        <SwitchPreference
+            android:key="god"
+            android:persistent="false"
+            android:title="God Mode" />
+
+        <SwitchPreference
+            android:key="ufo"
+            android:persistent="false"
+            android:title="Ufo Mode (Only Player 1)" />
+
+
+        <Preference
+            android:key="ammo"
+            android:persistent="false"
+            android:title="Unlimited Ammo" />
+
+        <Preference
+            android:key="money"
+            android:persistent="false"
+            android:title="Give money" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Weapons">
+
+        <Preference
+            android:persistent="false"
+            android:title="Give weapons"
+            android:key="weapons"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
