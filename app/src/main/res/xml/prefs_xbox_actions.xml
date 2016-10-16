@@ -4,11 +4,6 @@
     <PreferenceCategory
         android:title="Xbox General">
 
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView" />
         <Preference
             android:persistent="false"
             android:title="xNotify"
