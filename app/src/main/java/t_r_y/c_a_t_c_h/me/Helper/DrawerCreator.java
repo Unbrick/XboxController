@@ -13,11 +13,11 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import t_r_y.c_a_t_c_h.me.Activities.MainActivity;
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetConsole;
 import t_r_y.c_a_t_c_h.me.Fragments.BlackOps2.BlackOps2BaseFragment;
 import t_r_y.c_a_t_c_h.me.Fragments.BlackOps3.BlackOps3BaseFragment;
+import t_r_y.c_a_t_c_h.me.Fragments.FragmentGames;
 import t_r_y.c_a_t_c_h.me.Fragments.Settings.SettingsFragment;
-import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXboxParent;
+import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXbox;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**
@@ -28,20 +28,28 @@ import t_r_y.c_a_t_c_h.me.R;
 public class DrawerCreator implements Drawer.OnDrawerItemClickListener {
     private ProfileDrawerItem pdi;
     private AccountHeader headerResult;
-    private Drawer drawer;
-    private MainActivity mainActivity;
+    private static Drawer drawer;
+    private static MainActivity mainActivity;
     private Toolbar toolbar;
+    private static PrimaryDrawerItem itemGames;
 
     public DrawerCreator(final MainActivity mainActivity, Toolbar toolbar) {
         this.mainActivity = mainActivity;
         this.toolbar = toolbar;
 
-        new AsyncTaskGetConsole(console -> mainActivity.runOnUiThread(() -> {
-            if (console != null){
-                pdi.withName(console.getDebugName()).withEmail(console.getBoardName()+ " with dashboard "+console.getDashboard());
-                headerResult.updateProfile(pdi);
-            }else Helper.makeSnackbarError(mainActivity, "Something went wrong, please try again!");
-        })).execute();
+//       XboxSocket.getInstance().getConsole(console -> mainActivity.runOnUiThread(() -> {
+//            if (console != null){
+//                pdi.withName(console.getDebugName()).withEmail(console.getBoardName()+ " with dashboard "+console.getDashboard());
+//                headerResult.updateProfile(pdi);
+//            }else Helper.makeSnackbarError(mainActivity, "Something went wrong, please try again!");
+//        }));
+    }
+
+    public static void enableGameEntry(){
+        mainActivity.runOnUiThread(() -> {
+            itemGames.withEnabled(true);
+            drawer.updateItem(itemGames);
+        });
     }
 
     public DrawerCreator setupDrawer() {
@@ -50,6 +58,7 @@ public class DrawerCreator implements Drawer.OnDrawerItemClickListener {
         PrimaryDrawerItem itemBO2 = new PrimaryDrawerItem().withIdentifier(2).withName("Black Ops II");
         PrimaryDrawerItem itemBO3 = new PrimaryDrawerItem().withIdentifier(3).withName("Black Ops III");
         PrimaryDrawerItem itemGTAV = new PrimaryDrawerItem().withIdentifier(4).withName("GTA V");
+        itemGames = new PrimaryDrawerItem().withIdentifier(5).withName("Games").withEnabled(false);
 
         PrimaryDrawerItem footer = new PrimaryDrawerItem().withIdentifier(10).withName("Settings");
 
@@ -66,7 +75,7 @@ public class DrawerCreator implements Drawer.OnDrawerItemClickListener {
                 .withActivity(mainActivity)
                 .withAccountHeader(headerResult)
                 .withToolbar(toolbar)
-                .addDrawerItems(item1, new DividerDrawerItem(), itemBO2,itemBO3)
+                .addDrawerItems(item1, itemGames, new DividerDrawerItem(), itemBO2,itemBO3)
                 .addStickyDrawerItems(footer)
                 .withOnDrawerItemClickListener(this)
                 .build();
@@ -78,7 +87,7 @@ public class DrawerCreator implements Drawer.OnDrawerItemClickListener {
     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
         switch ((int)drawerItem.getIdentifier()){
             case 1:
-                mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,new FragmentXboxParent()).commit();
+                mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,new FragmentXbox()).commit();
                 drawer.closeDrawer();
                 break;
             case 2:
@@ -87,6 +96,10 @@ public class DrawerCreator implements Drawer.OnDrawerItemClickListener {
                 break;
             case 3:
                 mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content, new BlackOps3BaseFragment()).commit();
+                drawer.closeDrawer();
+                break;
+            case 5:
+                mainActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content, new FragmentGames()).commit();
                 drawer.closeDrawer();
                 break;
             case 10:

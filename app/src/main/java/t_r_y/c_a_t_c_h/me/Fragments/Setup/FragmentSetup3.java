@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 import com.tramsun.libs.prefcompat.Pref;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetConsole;
-import t_r_y.c_a_t_c_h.me.Interfaces.OnConsoleFetched;
-import t_r_y.c_a_t_c_h.me.Objects.Console;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXbox;
+import t_r_y.c_a_t_c_h.me.Xbox.XboxSocket;
 import t_r_y.c_a_t_c_h.me.R;
 
 /**
@@ -22,35 +23,45 @@ import t_r_y.c_a_t_c_h.me.R;
  */
 public class FragmentSetup3 extends Fragment{
 
-    private static android.widget.TextView tvSetupCpuKey;
-    private static android.widget.TextView tvSetupDashboard;
-    private static Button btnStart;
+    @BindView(R.id.tvSetupCpuKey)
+    TextView tvSetupCpuKey;
+    @BindView(R.id.tvSetupDashboard)
+    TextView tvSetupDashboard;
+    @BindView(R.id.btnSetupStart)
+    Button btnStart;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_setup_3,container,false);
-        this.tvSetupDashboard = (TextView) view.findViewById(R.id.tvSetupDashboard);
-        this.tvSetupCpuKey = (TextView) view.findViewById(R.id.tvSetupCpuKey);
-        btnStart = (Button) view.findViewById(R.id.btnSetupStart);
+        ButterKnife.bind(this,view);
+
         btnStart.setOnClickListener(view1 -> {
             Pref.putBoolean("setup",true);
+            FragmentXbox.setConnected(true);
             getActivity().finish();
         });
 
         return view;
     }
 
-    public static void IPValidated(final Activity activity){
-        new AsyncTaskGetConsole(console -> {
-            if (console != null){
-                activity.runOnUiThread(() -> {
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser)
+            validated();
+    }
+
+    public void validated(){
+        XboxSocket.getInstance().getConsole(console -> {
+            if (console != null) {
+                getActivity().runOnUiThread(() -> {
                     tvSetupDashboard.setText(console.getDashboard());
                     tvSetupCpuKey.setText(console.getCpukey());
                     btnStart.setVisibility(View.VISIBLE);
                 });
             }
-        }).execute();
+        });
     }
 
 

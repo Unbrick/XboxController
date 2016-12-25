@@ -5,7 +5,7 @@ import android.preference.Preference;
 
 import com.github.machinarius.preferencefragment.PreferenceFragment;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskSetMem;
+import t_r_y.c_a_t_c_h.me.Xbox.XboxSocket;
 import t_r_y.c_a_t_c_h.me.BlackOps2XboxMods;
 import t_r_y.c_a_t_c_h.me.Helper.Constants;
 import t_r_y.c_a_t_c_h.me.Helper.Helper;
@@ -17,6 +17,8 @@ import static t_r_y.c_a_t_c_h.me.Helper.Constants.NOP;
  * Created by Admin on 07.09.2016.
  */
 public class FragmentBlackOps2_1 extends PreferenceFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
+
+    XboxSocket xboxSocket = XboxSocket.getInstance();
 
     @Override
     public void onCreate(Bundle paramBundle) {
@@ -35,7 +37,7 @@ public class FragmentBlackOps2_1 extends PreferenceFragment implements Preferenc
         switch (preference.getKey()){
             case "bo2bypass":
                 for (String offset : Constants.bypassOffsets)
-                    new AsyncTaskSetMem().execute(offset,NOP);
+                    xboxSocket.setMem(offset,NOP);
                 Helper.makeSnackbar(getActivity(),"Bypass successful!");
                 break;
         }

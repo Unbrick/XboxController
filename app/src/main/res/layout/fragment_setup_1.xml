@@ -88,7 +88,7 @@
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/btnProceed"
-        android:text="Procceed"
+        android:text="Verify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal" />

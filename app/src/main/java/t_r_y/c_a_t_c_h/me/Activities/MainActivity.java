@@ -9,9 +9,9 @@ import com.tramsun.libs.prefcompat.Pref;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXbox;
 import t_r_y.c_a_t_c_h.me.Helper.ConnectionChecker;
 import t_r_y.c_a_t_c_h.me.Helper.DrawerCreator;
-import t_r_y.c_a_t_c_h.me.Fragments.Xbox.FragmentXboxParent;
 import t_r_y.c_a_t_c_h.me.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         Pref.init(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.content, new FragmentXboxParent()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, new FragmentXbox()).commit();
 
         if (!Pref.getBoolean("setup", false)) {
             startActivity(new Intent(MainActivity.this, ActivitySetup.class));

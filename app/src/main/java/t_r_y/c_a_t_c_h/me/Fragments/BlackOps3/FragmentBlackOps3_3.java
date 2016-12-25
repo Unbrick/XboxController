@@ -12,7 +12,7 @@ import android.widget.RadioGroup;
 
 import com.github.machinarius.preferencefragment.PreferenceFragment;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskGetGamertags;
+import t_r_y.c_a_t_c_h.me.Xbox.XboxSocket;
 import t_r_y.c_a_t_c_h.me.BlackOps3XboxMods;
 import t_r_y.c_a_t_c_h.me.Helper.Constants;
 import t_r_y.c_a_t_c_h.me.Fragments.BaseFragmentWeaponSelector;
@@ -49,7 +49,7 @@ public class FragmentBlackOps3_3 extends PreferenceFragment implements Preferenc
     }
 
     private void update() {
-        new AsyncTaskGetGamertags(AsyncTaskGetGamertags.BO3_ZM, gamertags -> {
+        XboxSocket.getInstance().getGamertagsBlackOpsIII(gamertags -> {
             if (gamertags != null){
                 getActivity().runOnUiThread(() -> {
                     refreshLayout.setRefreshing(false);
@@ -84,7 +84,7 @@ public class FragmentBlackOps3_3 extends PreferenceFragment implements Preferenc
                 Helper.makeSnackbar(getActivity(),"Connection interrupted, please try again!");
             }
 
-        }).execute();
+        });
     }
 
     @Override

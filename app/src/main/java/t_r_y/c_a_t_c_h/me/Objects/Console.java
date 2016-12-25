@@ -23,7 +23,6 @@ public class Console {
     private int motherboardTemp;
     private String boardName;
     private String debugName;
-    private boolean filled;
 
     public static Console getConsole() {
         if (console == null)
@@ -31,12 +30,8 @@ public class Console {
         return console;
     }
 
-    public boolean isFilled() {
-        return filled;
-    }
+    private Console(){
 
-    public void setFilled(boolean filled) {
-        this.filled = filled;
     }
 
     public String getCpukey() {

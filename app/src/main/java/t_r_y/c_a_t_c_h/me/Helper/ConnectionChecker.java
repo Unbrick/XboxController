@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.os.Handler;
 import android.util.Log;
 
-import t_r_y.c_a_t_c_h.me.AsyncTasks.AsyncTaskPlainCommandWithResult;
-import t_r_y.c_a_t_c_h.me.Interfaces.ResultListener;
-
 /**
  * Created by Admin on 13.09.2016.
  */
@@ -18,17 +15,7 @@ public class ConnectionChecker {
         @Override
         public void run() {
             Log.d(getClass().getSimpleName(), "Issued");
-            new AsyncTaskPlainCommandWithResult(new ResultListener() {
-                @Override
-                public void onResult(String result) {
-                    if (result.equals("")) {
-                        Helper.makeSnackbarError(mainActivity, "Connection interrupted!");
-                        stopChecker();
-                    } else {
-                        mHandler.postDelayed(mStatusChecker, 5000);
-                    }
-                }
-            }).execute(" ");
+            //TODO check connection
 
         }
     };

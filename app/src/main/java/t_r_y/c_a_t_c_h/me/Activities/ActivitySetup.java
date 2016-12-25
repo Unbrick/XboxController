@@ -17,6 +17,7 @@ import t_r_y.c_a_t_c_h.me.R;
 public class ActivitySetup extends AppCompatActivity {
 
     private int backPressedCount = 0;
+    private boolean backAllowed = false;
 
     public static NonSwipeableViewPager getViewPager() {
         return viewPager;
@@ -28,6 +29,7 @@ public class ActivitySetup extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
+        backAllowed = getIntent().getBooleanExtra("backAllowed",false);
         StepperIndicator indicator = (StepperIndicator) findViewById(R.id.stepperIndicator);
         viewPager = (NonSwipeableViewPager) findViewById(R.id.pagerSetup);
         viewPager.setAdapter(new SetupAdapter(getSupportFragmentManager()));
@@ -36,12 +38,14 @@ public class ActivitySetup extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (backPressedCount == 0){
-            TSnackbar.make(findViewById(R.id.snackbarContainer),"Press again to exit",TSnackbar.LENGTH_LONG);
-            backPressedCount++;
-        }else if(backPressedCount == 1){
-            backPressedCount = 0;
-            System.exit(0);
+        if (!backAllowed){
+            if (backPressedCount == 0){
+                TSnackbar.make(findViewById(R.id.snackbarContainer),"Press again to exit",TSnackbar.LENGTH_LONG);
+                backPressedCount++;
+            }else if(backPressedCount == 1){
+                backPressedCount = 0;
+                System.exit(0);
+            }
         }
     }
 

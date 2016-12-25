@@ -7,13 +7,15 @@
     <TextView
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_marginBottom="8dp"
-        android:text="Your chosen IP"
+        android:text="Your Xbox IP"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:text="192.192.192.192"
         android:textColor="@color/md_black_1000"
         android:layout_marginBottom="8dp"
         android:layout_gravity="center_horizontal"
@@ -21,8 +23,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_marginBottom="5dp"
+        android:text="Please choose your game directory:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center|start"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Drive:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerDrive"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center|start"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Directory:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerDirectory"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
     <Button
-        android:text="validate"
+        android:text="@string/next_button_label"
         android:layout_gravity="center_horizontal"
         style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/btnValidate"

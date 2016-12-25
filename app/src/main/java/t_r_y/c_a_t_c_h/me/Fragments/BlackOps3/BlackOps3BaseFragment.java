@@ -14,6 +14,7 @@ import com.gigamole.navigationtabstrip.NavigationTabStrip;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import t_r_y.c_a_t_c_h.me.Adapter.BlackOps3Adapter;
+import t_r_y.c_a_t_c_h.me.Xbox.XboxSocket;
 import t_r_y.c_a_t_c_h.me.Helper.Helper;
 import t_r_y.c_a_t_c_h.me.Activities.MainActivity;
 import t_r_y.c_a_t_c_h.me.R;
@@ -39,9 +40,12 @@ public class BlackOps3BaseFragment extends Fragment {
         ((MainActivity) getActivity()).getSupportActionBar().setTitle("Black Ops III");
         viewPager.setAdapter(new BlackOps3Adapter(getChildFragmentManager()));
         mainNTS.setViewPager(viewPager);
-        Helper.getRunningTitle(result -> {
-            if (!result.contains("4156091D"))
-                Helper.makeSnackbar(getActivity(),"Please start Black Ops III before using this functions, otherwise it could cause crashes!");
+        XboxSocket.getInstance().getRuningTitleId(new XboxSocket.OnResultListener() {
+            @Override
+            public void result(Object o) {
+                if (!((String)o).contains("4156091D"))
+                    Helper.makeSnackbar(getActivity(),"Please start Black Ops III before using this functions, otherwise it could cause crashes!");
+            }
         });
         return view;
     }

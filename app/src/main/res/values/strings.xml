@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Xbox Controller</string>
+    <string name="textWaiting">waiting…</string>
+    <string name="console_information">Console information:</string>
+    <string name="cpukey">CPUKey:</string>
+    <string name="dashboard">Dashboard:</string>
+    <string name="board">Board:</string>
+    <string name="console_name">Console Name:</string>
+    <string name="temperatures">Temperatures:</string>
+    <string name="cpu">CPU:</string>
+    <string name="gpu">GPU:</string>
+    <string name="ram">RAM:</string>
+    <string name="motherboard">Motherboard:</string>
 </resources>
