@@ -20,7 +20,7 @@
         app:nts_active_color="#000"
         app:nts_inactive_color="#c4c4c4"/>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_weight="1"
         android:layout_width="match_parent"

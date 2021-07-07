@@ -28,7 +28,7 @@
             android:layout_marginLeft="15dp"
             android:text="Receiving..."
             android:layout_marginBottom="8dp"
-            android:textColor="@color/md_black_1000"
+            android:textColor="@color/black"
             android:id="@+id/tvSetupCpuKey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -46,7 +46,7 @@
         <TextView
             android:layout_marginLeft="15dp"
             android:text="Receiving..."
-            android:textColor="@color/md_black_1000"
+            android:textColor="@color/black"
             android:id="@+id/tvSetupDashboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

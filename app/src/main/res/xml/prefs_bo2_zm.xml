@@ -2,6 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
+        android:title="Player">
+
+        <Preference
+            android:persistent="false"
+            android:title="Select player"
+            android:key="player"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="BlackOps 2 Host Zombie Mods">
 
         <SwitchPreference
@@ -13,6 +23,16 @@
             android:persistent="false"
             android:title="Unlimited ammo"
             android:key="ammo"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="No target"
+            android:key="target"/>
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Faster player speed"
+            android:key="speed"/>
 
         <Preference
             android:persistent="false"

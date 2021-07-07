@@ -4,6 +4,12 @@
     <PreferenceCategory
         android:title="BlackOps 2 OffHost Mods">
 
+
+        <SwitchPreference
+            android:persistent="false"
+            android:title="Force host"
+            android:key="forcehost"/>
+
         <Preference
             android:persistent="false"
             android:title="Bypass"

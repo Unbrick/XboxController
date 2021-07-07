@@ -1,81 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/refreshLayout"
-    android:layout_width="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:orientation="vertical"
-    android:paddingRight="?android:attr/scrollbarSize">
+    android:layout_marginBottom="6dip"
+    android:layout_marginLeft="15dip"
+    android:layout_marginRight="6dip"
+    android:layout_marginTop="6dip"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/rbPlayerAll"
+            android:tag="-1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dip"
-            android:layout_marginLeft="15dip"
-            android:layout_marginRight="6dip"
-            android:layout_marginTop="6dip"
-            android:orientation="vertical">
+            android:text="All players" />
 
-            <TextView
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Choose player" />
+    </RadioGroup>
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbPlayer1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 1" />
-
-                <RadioButton
-                    android:id="@+id/rbPlayer2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 2" />
-
-
-                <RadioButton
-                    android:id="@+id/rbPlayer3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 3" />
-
-                <RadioButton
-                    android:id="@+id/rbPlayer4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 4" />
-
-                <RadioButton
-                    android:id="@+id/rbPlayerAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="All players" />
-
-            </RadioGroup>
-
-
-        </LinearLayout>
-
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
-
-    </LinearLayout>
-
-</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

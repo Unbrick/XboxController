@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:scaleType="centerCrop"
-        android:background="@color/md_blue_grey_600"
+        android:background="@color/blue_grey_600"
         android:src="@drawable/xbox_cover"/>
 
     <TextView

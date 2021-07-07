@@ -5,11 +5,6 @@
 
         <SwitchPreference
             android:persistent="false"
-            android:title="Force host"
-            android:key="forcehost"/>
-
-        <SwitchPreference
-            android:persistent="false"
             android:title="God Mode"
             android:key="godmode"/>
 

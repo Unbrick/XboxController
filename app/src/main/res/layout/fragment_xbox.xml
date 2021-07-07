@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swiperefresh"
@@ -30,7 +30,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="180dp"
-                    android:textColor="@color/md_white_1000"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:layout_margin="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -71,7 +71,7 @@
                                 android:layout_marginBottom="4dp"
                                 android:layout_marginLeft="15dp"
                                 android:text="@string/textWaiting"
-                                android:textColor="@color/md_black_1000"
+                                android:textColor="@color/black"
                                 android:id="@+id/tvSetupCpuKey"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
@@ -100,7 +100,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvDashboard"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -132,7 +132,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvBoardName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -162,7 +162,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvConsoleName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -171,9 +171,9 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginRight="15dp"
@@ -217,7 +217,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvCpuTemp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -247,7 +247,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvGPUTemp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -277,7 +277,7 @@
                                     android:layout_marginStart="15dp"
                                     android:layout_marginLeft="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvRAMTemp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -307,7 +307,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginStart="15dp"
                                     android:text="@string/textWaiting"
-                                    android:textColor="@color/md_black_1000"
+                                    android:textColor="@color/black"
                                     android:id="@+id/tvMotherboardTemp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -316,7 +316,7 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -364,5 +364,5 @@
 
     </ScrollView>
 
-</android.support.v4.widget.SwipeRefreshLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
